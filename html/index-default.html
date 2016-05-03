@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A default installation of Goddard Cache.">
+<meta name="apple-mobile-web-app-title" content="Goddard Cache">
+<meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+<meta name="keywords" content="patrick tudor, ptudor, goddard cache">
+<link rel="shortcut icon" href="https://xn--mgbbh2a9fub.xn--ngbc5azd/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="https://xn--mgbbh2a9fub.xn--ngbc5azd/apple-touch-icon.png">
+
+<script>
+function submitForm(oFormElement)
+{
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function(){  document.getElementById("demo").innerHTML = xhr.responseText;};
+  xhr.open (oFormElement.method, oFormElement.action, true);
+  xhr.send (new FormData (oFormElement));
+  return false;
+}
+</script>
+</head>
+
+<body>
+<form id="goddard" method="POST" action="/cgi-bin/goddard" onsubmit="submitForm(this);" >
+        <input type="search" name="goddard-search" placeholder="example.com" autofocus="on" autocomplete="on" autocorrect="off" autosave="on">
+        <input type="hidden" name="mode" value="search">
+        <input type="submit" id="button-goddard" onsubmit="submitForm(goddard);" >
+</form>
+
+
+        <button type="button" id="xbutton-goddard" onclick="submitForm(goddard)">Search</button>
+<div>
+<pre>
+<p id="demo">div</p>
+</pre>
+</div>
+</body>
+</html>

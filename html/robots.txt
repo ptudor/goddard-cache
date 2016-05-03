@@ -1,0 +1,7 @@
+# Internet Archive can have anything.
+User-agent: ia_archiver
+Disallow:
+
+# all others can't index cgi-bin
+User-Agent: *
+Disallow: /cgi-bin/
