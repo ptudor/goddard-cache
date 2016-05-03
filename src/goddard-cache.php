@@ -285,7 +285,7 @@ class StoredRecord {
 	// "escape" is to prevent for example "?domain=;echo%20$PATH;cat%20index.php"
 	// "escapeshellarg() adds single quotes around a string and quotes/escapes any existing single quotes "
 	// the variant with cmd() adds backslashes so not using it.
-	$exec = EXTERNAL_BINARY . " " . escapeshellarg($adjustedname); 
+	$exec = EXTERNAL_BINARY . " " . escapeshellarg($adjustedname) . " 2>&1 "; 
 	// this try/catch doesn't work. chmod 644 /usr/bin/ls
 	// will exit 126 but this is happy to return a blank page
 	try {
